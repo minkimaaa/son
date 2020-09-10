@@ -1,4 +1,5 @@
 import discord
+improt os
 
 client = discord.Client()
 
@@ -18,5 +19,6 @@ async def on_message(message):
         if message.content.startswith("할말"):
             await message.channel.send("대답")
 
-
-client.run("NzUzMjI2MTcyOTA4Njk5NzI5.X1jGiQ.IQXSazUQfKUHTyCPt1yyVivKhbU")
+            
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
